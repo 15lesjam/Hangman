@@ -1,0 +1,24 @@
+#Hangman draft 2. 15/05/17. Jamie Lester
+#This code will produce an intoduction to the main game
+#And ask the player how many games they wish to play
+
+def intro():
+    print("Welcome to hangman!")
+    global num_games
+    
+    num_games = 0
+    while num_games < 1:
+        num_games = input("Would you like to play one, two, or three games? ")
+        if num_games == "1" or num_games == "One" or num_games == "one":
+            num_games = 1
+        elif num_games == "2" or num_games == "Two" or num_games == "two":
+            num_games = 2
+        elif num_games == "3" or num_games == "Three" or num_games == "three":
+            num_games = 3
+        else:
+            print("Please try again.")
+            num_games = 0
+
+intro()
+
+print(num_games)
